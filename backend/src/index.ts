@@ -1,19 +1,25 @@
+import * as dotenv from "dotenv";
 import express from 'express';
 import cors from 'cors';
-import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
+import helmet from 'helmet';
+
+dotenv.config();
+
+if (!process.env.PORT || !process.env.DB_URL) process.exit(1);
+const PORT: number = parseInt(process.env.PORT as string, 10);
+const DB_URL: string = process.env.DB_URL;
 
 const app = express();
 const router = express.Router();
+app.use(helmet());
 app.use(cors());
-app.use(bodyParser.json());
+app.use(express.urlencoded({extended:true}));
+app.use(express.json());
 
-app.listen(4000, err => {
-    if(err) return console.log(err);
-    return console.log('Listening...');
-});
+app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
 
-mongoose.connect('mongodb://localhost:27017/cultural_events')
+mongoose.connect(DB_URL)
         .then(() => console.log('MongoDB connection open'))
         .catch(() => console.log('MongoDB connection error'));
 
