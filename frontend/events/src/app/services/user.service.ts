@@ -37,4 +37,15 @@ export class UserService {
 
     return this.http.post(`${this.url}/users/register`, data);
   }
+
+  setNewPassword(username, newpassword){
+
+    const data = {
+      username: username,  
+      newpassword: newpassword
+    }
+
+    return this.http.post(`${this.url}/users/setnewpassword`, data);
+
+  }
 }

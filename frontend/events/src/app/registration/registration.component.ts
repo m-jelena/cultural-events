@@ -16,12 +16,12 @@ export class RegistrationComponent implements OnInit {
   ];
 
   orgName = new FormControl('', [Validators.required, Validators.pattern('^[A-Z]+[a-z0-9]*\.*')]);
-  orgStreet = new FormControl('', [Validators.required, Validators.pattern('^[A-Z][a-z0-9]*\.*')]);
+  orgStreet = new FormControl('', [Validators.required, Validators.pattern('^[A-Z]{1}[A-Za-z]+\.{1}[A-Za-z]*\.{1}[A-Za-z]*\.{0,1}[0-9a-z]{1,3}$')]);
   orgCity = new FormControl('', [Validators.required, Validators.pattern('^[A-Z]+[a-z]*\.{0,1}[A-Za-z]*')]);
   contactPerson = new FormControl('', [Validators.required, Validators.pattern('^[A-Z][a-z]*\.*')]);
   telNumber = new FormControl('', [Validators.required, Validators.pattern('^(00381|0)6\[0-9]{7,8}$')]);
   selectArea = new FormControl('', [Validators.required]);
-  webSite = new FormControl('', [Validators.required, Validators.pattern('^(www.)[a-z0-9]+\.[a-z]+(\/[a-zA-Z0-9#]+\/?)*$')]);
+  webSite = new FormControl('', [Validators.required, Validators.pattern('^(www.)[a-z0-9]+\.{1,}[a-z]+(\/[a-zA-Z0-9#]+\/?)*$')]);
   eMail = new FormControl('', [Validators.required, Validators.email]);
   userName = new FormControl('', [Validators.required, Validators.pattern('^[a-z]{3,}[A-Z0-9]*')]);
   passWord = new FormControl('', [Validators.required, Validators.pattern('[a-zA-Z0-9]{8,}')]);
@@ -39,7 +39,7 @@ export class RegistrationComponent implements OnInit {
     if (this.orgStreet.hasError('required')) {
       return 'Unesite ulicu i broj';
     }
-    return this.orgStreet.hasError('pattern') ? 'Prvo slovo mora biti veliko' : '';
+    return this.orgStreet.hasError('pattern') ? 'Prvo slovo mora biti veliko i na kraju broj ulice' : '';
   }
 
   getErrorMessageForOrgCity() {

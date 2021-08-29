@@ -31,7 +31,6 @@
 
                 <mat-form-field class="full-width" appearance="outline">
                     <mat-label>Kontakt telefon</mat-label>
-                    <span matPrefix>+381 &nbsp;</span>
                     <input matInput placeholder="Unesite broj telefona" [formControl]="telNumber" name="telephone" [(ngModel)]="telephone" required>
                     <mat-icon matSuffix>phone</mat-icon>
                     <mat-error *ngIf="telNumber.invalid">{{getErrorMessageForTelNumber()}}</mat-error>

@@ -31,5 +31,23 @@ export class UserController {
             }
         });
     }
+    setnewpassword = (req: express.Request, res: express.Response) => {
+        let username = req.body.username;
+        let newpassword = req.body.newpassword;
+        
+        User.findOne({"username": username}, (err, user) => {
+            if (err) {
+                console.log(err);
+            } else {
+                if (user != null) {
+                    User.collection.updateOne({"username": username}, {$set: {"password": newpassword}});
+                    res.json({'message': 'ok'});
+                } else {
+                    res.json({'message': 'not ok'});
+                }
+            }
+        });
+        
+    }
 
 }
