@@ -1,0 +1,40 @@
+
+<div *ngFor='let e of events'>
+    <mat-card  *ngIf='id===e.id'>            
+            <div class="event-header" >   
+                <div class="event-content">
+                    <div class="event-info">
+                        <span class='event-category'> {{e.eventType}}</span> &nbsp; |  &nbsp;
+                        <div class="event-uploaded">
+                            {{e.publishingDate.toLocaleTimeString()}} | {{e.publishingDate.toDateString()}}
+                        </div>
+                        <span>&nbsp; | &nbsp;</span>
+                        <div class="event-author">
+                            {{e.author}}
+                        </div>
+                    </div>
+                    <mat-card-title >{{e.title}}</mat-card-title>
+                    <div class="event-adress">                       
+                        <img src="/src/img/maps-and-flags.svg" alt="">                       
+                        <p class="event-loc">{{e.eventSpace}} <br> {{e.eventPlace}} </p>
+                    </div>
+                    <p class="event-text mat-body-1" [innerHtml]='e.content'>         
+                </div> 
+                <div class="event-img">
+                    <img   [src]='e.imageUrl' alt="">
+                </div>   
+            
+            </div>         
+            <div class="separator">Vreme odrzavanja</div>
+            <div class="event-time">
+                <span>{{ e.dateOfEvent }}, </span> 
+                <span>{{ e.timeOfEvent }}</span>
+            </div>
+            <div class="separator">Dodatne informacije</div>
+            <div class="event-desc">
+                <p class="event-chip"> {{e.ageLimit}} </p>
+                <p class="event-chip">NoSmoking</p>
+            </div>          
+    </mat-card>
+
+</div>

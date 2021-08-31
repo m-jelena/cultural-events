@@ -1,0 +1,56 @@
+
+
+<div class="content">
+        
+    <mat-card  *ngFor='let e of events' >
+        <div  class="card-data">
+            <img mat-card-image  [src]='e.imageUrl' alt="">
+            <div class="card-info">
+                <span>&nbsp; Objavljeno:  &nbsp;</span>
+                <div class="card-uploaded">
+                    {{e.publishingDate.toLocaleTimeString()}}, {{e.publishingDate.toDateString()}}
+                </div>
+                <span>&nbsp; by &nbsp;</span>
+                <div class="card-author">
+                    {{e.author}}
+                </div>
+            </div>
+        </div>
+        
+        <mat-card-header>
+            <mat-card-title class="mat-headline ">{{e.title}}</mat-card-title>
+            <!-- <mat-divider></mat-divider> -->
+            <mat-card-subtitle class="mat-subheading-1">
+            <div class="card-time">
+                <span>{{ e.dateOfEvent }} </span> 
+                <span>{{ e.timeOfEvent }}</span>
+                </div>
+                <div class="event-loc">
+                
+                    <p class="card-adress">{{e.eventSpace}} &nbsp; - &nbsp; {{e.eventPlace}} </p>
+                </div>
+            </mat-card-subtitle>
+            
+        </mat-card-header>
+        <!-- <mat-divider></mat-divider> -->
+        <mat-card-content>
+            <p class="mat-body-2" [innerHtml]='e.description'> 
+        
+            </p>
+        </mat-card-content>
+        
+        <mat-card-actions>
+            <div>
+                <p class="card-age"> {{e.ageLimit}} </p>
+                <p class="card-placeDesc">NoSmoking</p>
+                
+            </div>
+            <button mat-button routerLink='/event/{{e.id}}' (click)="goToEvent(e.id)">Nastavi citanje >></button>
+        </mat-card-actions>
+        <div class="card-category">
+            <h3>{{e.eventType}}</h3>
+        </div>
+    </mat-card>        
+
+</div>
+

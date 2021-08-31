@@ -1,0 +1,137 @@
+
+
+.content {
+    padding: 16px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    
+  }
+  .content > mat-card {
+    position: relative;
+    width: 300px;
+    max-width: 450px;
+    margin: 0.6em ;
+  }
+  
+  
+  
+  .card-info { 
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    font-size: 0.6em;
+    padding-left: 0.rem;
+    color: gray;
+    margin-top: -1em;
+  } 
+  
+  .card-category {
+    position: absolute;
+    background:rgb(85, 44, 231);
+    font-size: small;
+    padding: 0.2rem 0.3rem;
+    border-radius: 5px;
+    margin-left: 0.2rem; 
+    margin-top: 0.2rem;
+    text-transform: uppercase;
+    color: white;
+    top: 0;
+    left: 0;
+  }
+  
+  .card-category h3 {
+    margin: 0px;
+  }
+  
+  .mat-card-image {
+    height: 200px;
+  }
+  
+  .card-time {
+    
+    font-weight: bold;
+    font-size: 1.2rem;
+    position: relative;
+    z-index: 111;
+  }
+  
+  .card-time span:first-child {
+    background: gray;
+    padding: 0.2rem;
+  }
+  .card-time span:last-child {
+    background: rgb(105, 123, 172);
+    padding: 0.2rem;
+  }
+  
+  .card-adress {
+    font-weight: bold;
+    color: grey;
+    font-size: 0.7rem;
+    margin-top: 0;
+    margin-bottom: 0;
+  
+  }
+  
+  .card-placeDesc,
+  .card-age {
+  
+    font-size:  0.6rem;
+    font-weight: bold;
+    margin-right: 0.2rem;
+    padding: 0.3rem 0.5rem;
+    background: rgb(104, 204, 243);
+    border-radius: 20px;
+  }
+  
+  .mat-card-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0px;
+  }
+  .mat-card-actions div {
+    display: flex;
+  }
+  .mat-card-actions button {
+    font-size:  0.6rem;
+    color: grey;
+  }
+  
+  
+  
+  
+  
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+    .content {
+        padding: 0px;
+    }
+    body {
+        width: 200px;
+    }
+    .content > mat-card {
+        width: 250px; 
+    }
+    
+  }
+  
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+  
+  }
+  
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+  
+  }
+  
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    
+  }
+  

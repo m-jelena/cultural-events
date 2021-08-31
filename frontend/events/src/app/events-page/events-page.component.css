@@ -1,0 +1,158 @@
+.mat-card{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.mat-card-title{
+    line-height: 1.2em;
+    font-size: 1.7em;
+    margin: 0.1em 0;
+}
+.mat-body-1 {
+    font-size: 1em;
+    line-height: 1.45em;
+    letter-spacing: 0.01em;
+}
+hr {
+    border: 1px solid white;
+    width: 100%;
+    background-color: grey;
+}
+.event-info {
+    display: flex;
+    margin-bottom: 1.2rem;
+    font-size: 0.8em;
+    color: gray;
+}
+
+.event-uploaded:hover, 
+.event-author:hover {
+    color: black;
+}
+
+.event-category { 
+    font-size: 1.3em;
+    font-weight: bold;
+    color: rgb(21, 25, 248);
+}
+.event-category:hover{
+    color: rgb(4, 7, 138);
+}
+.event-header {
+    display: flex;
+    width: 100%;
+}
+.event-content {
+    width: 100%;
+    flex: 1 0 50%;
+}
+
+.event-img  {
+ 
+    margin-bottom: auto;
+    margin-top: auto;
+}
+.event-img img {
+    width: 100%;
+    /* max-width: 700px; */
+    flex: 1 0 50%;
+    
+}
+
+.event-adress {
+    display: flex;
+    width: 100%;
+    flex-grow: 3;
+    margin: 1.2em 0;
+    line-height: 1.2;
+}
+.event-adress img {
+    height: 40px;
+    width: 40px;
+    color: black;
+}
+
+.event-loc{
+    margin-left: 1rem;
+    font-weight: 200;
+    color: gray;
+}
+.event-loc:hover {
+    color: black;
+}
+.event-text {
+    text-align: justify;
+    width: 90%;
+}
+
+.event-time {
+    height: 3em;
+    font-weight: bold;
+    font-size: 1.2em;
+    align-self: center;
+    line-height: 3em;
+}
+
+
+.event-desc {
+    height: 3em;
+    display: flex;   
+}
+.event-chip {
+    display: flex;
+    font-size:  0.7em;
+    font-weight: bold;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-right: 0.2em;
+    padding: 0.3rem 0.5rem;
+    background: rgb(104, 204, 243);
+    border-radius: 20px;
+    align-self: center;
+}
+
+/* -------------------------SEPARATOR-------------------------------- */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.8em;
+  }
+  
+  .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgb(158, 157, 157);
+  }
+  
+  .separator:not(:empty)::after {
+    margin-left: .25em;
+  }
+
+
+
+/* --------------------media query----------------------------- */
+  @media only screen and (max-width: 900px) {
+    .event-header {
+        flex-direction: column-reverse;
+    }
+    .event-text {
+        width: 100%;
+    }
+  }
+  @media only screen and (max-width: 500px) {
+    mat-card {
+        font-size: 10px;
+    }
+  }
+  @media only screen and (min-width: 1201px) {
+    mat-card {
+        font-size: 20px;
+    }
+  }
+  @media only screen and (min-width: 1501px) {
+    mat-card {
+        font-size: 25px;
+    }
+  }
