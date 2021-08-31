@@ -13,12 +13,12 @@ import { EventsService } from '../services/events.service';
 export class EventsPageComponent implements OnInit {
   
   constructor(private eventService: EventsService) { }
-  id:string='1';
+  id:string='';
   events: Event[] = [];
   
   ngOnInit(): void {
     this.events = EVENTS;
-    // this.id = this.eventService.id;
+    this.id = this.eventService.id;
   }
 
 }

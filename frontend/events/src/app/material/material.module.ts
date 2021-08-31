@@ -11,7 +11,6 @@ const MaterialComponents = [
 ]
 
 
-AnalyserNode
 @NgModule({
   declarations: [],
   imports: [MaterialComponents],
