@@ -34,19 +34,21 @@ export class SetNewPasswordComponent implements OnInit {
     }
     return this.confirmPassword.hasError('pattern') ? 'Minimalno 8 karaktera, slova ili brojeva' : '';
   }
-
+  
   username: string;
   newpassword: string;
   confirmpassword: string;
+  userAskNewPassword: string; // radi provere
   
   constructor(private userService: UserService) { }
 
   ngOnInit(): void {
+    this.userAskNewPassword = JSON.parse(localStorage.getItem('userAskNewPass'));
   }
 
   setNewPassword(){
     if(this.userName.valid && this.newPassword.valid && this.confirmPassword.valid) {
-      if(this.newpassword == this.confirmpassword) {
+      if(this.newpassword == this.confirmpassword && this.userAskNewPassword == this.username) {
         this.userService.setNewPassword(this.username, this.newpassword).subscribe(resp => {
           if (resp['message'] == 'ok') {
             alert('Uspešno ste promjenili lozinku.');
@@ -54,11 +56,13 @@ export class SetNewPasswordComponent implements OnInit {
   
           } else if(resp['message'] == 'not ok') {
             alert('Korisničko ime nije ispravno! Provjerite vaše korisnično ime, poslali smo vam ga u mejlu za resetovanje lozinke.');
+            this.userName.reset()
           }
         })
       } else {
-        alert("Lozinke su različite!!!");
+        alert("Korisničko ime nije vaše ili su vam lozinke različite!!!");
         this.hide = false;
+        this.userName.reset();
       }
     } else {
       alert("Sva polja su obavezna!");

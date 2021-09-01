@@ -31,6 +31,7 @@ export class UserController {
             }
         });
     }
+
     setnewpassword = (req: express.Request, res: express.Response) => {
         let username = req.body.username;
         let newpassword = req.body.newpassword;

@@ -11,7 +11,7 @@ userRouter.route('/register').post((req, res) => {
     new UserController().register(req, res);
 });
 
-userRouter.route('/setnewpassword').post((req, res) => {
+userRouter.route('/setnewpassword/:username').post((req, res) => {
     new UserController().setnewpassword(req, res);
 });
 

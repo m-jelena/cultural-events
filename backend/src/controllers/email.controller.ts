@@ -46,7 +46,7 @@ export class EmailController {
                                 <p>Zdravo ${user.username}! Dobrodošli na naš portal!</p>
                                 <p>Vaše korisničko ime je: <b>${user.username}</b> unesite ga u predviđeno polje na linku ispod, kako bi uspešno mogli da resetujete lozinku.</p>
                                 <p>Klikom na link ispod možete resetovati lozinku.</p> 
-                                <a href="http://localhost:4200/setnewpassword" target="_blank">http://localhost:4200/setnewpassword</a>
+                                <a href="http://localhost:4200/setnewpassword/${user.username}" target="_blank">http://localhost:4200/setnewpassword/${user.username}</a>
                                 <p>Ako i dalje imate problema sa prijavljivanjem na našem potalu, pišite nam na jedan od mejlova iz sekcije kontakti.</p>
 
                                 <p style="margin-top: 100px;"><i>Tim 4, Kulturni događaji u Srbiji</i></p>

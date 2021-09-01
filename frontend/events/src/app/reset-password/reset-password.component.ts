@@ -50,6 +50,7 @@ export class ResetPasswordComponent implements OnInit {
           this.eMail.reset();
           this.userName.reset();
         } else if(data['message'] == 'ok')  {
+          localStorage.setItem('userAskNewPass', JSON.stringify(this.username)); // zapamti korisnika koji je trazi promjenu lozinke
           alert(`Zdravo ${this.username}, na ovu email adresu ${this.email} je poslan link za resetovanje lozinke.`);
         }
       });

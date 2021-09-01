@@ -45,7 +45,7 @@ export class UserService {
       newpassword: newpassword
     }
 
-    return this.http.post(`${this.url}/users/setnewpassword`, data);
+    return this.http.post(`${this.url}/users/setnewpassword/${username}`, data);
 
   }
 }
