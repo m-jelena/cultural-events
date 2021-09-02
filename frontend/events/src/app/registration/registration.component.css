@@ -2,7 +2,6 @@
     max-width: 800px;
     min-width: 300px;
     margin: auto;
-    
 }
 
 .reg {
@@ -12,7 +11,8 @@
     font-weight: lighter;
     font-size: 2rem;
     padding: 2rem 0;
-    background-color: rgba(95, 144, 184, 0.06);
+    /* background-color: rgba(95, 144, 184, 0.06); */
+    background-color: #c9e6ff;
     margin-bottom: 0.4rem;
 }
 

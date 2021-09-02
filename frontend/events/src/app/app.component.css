@@ -1,8 +1,12 @@
-.loginReg a {
-    text-decoration: none;
+.mat-toolbar {
+    background-color: #696c6e;
+}
+
+.spacer {
+    flex: 1 1 auto;
 }
 
 .show {
-    width: 80%;
+    width: 90%;
     margin: 2rem auto;
 }

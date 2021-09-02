@@ -1,6 +1,13 @@
-<div class="loginReg">
-  <a routerLink="login">Prijavi se</a> | <a routerLink="register">Registruj se</a>
-</div>
+<mat-toolbar color="primary">
+  <button mat-icon-button>
+    <mat-icon>home</mat-icon>
+  </button>
+  <span>Kulturni događaji</span>
+  <span class="spacer"></span>
+  <a mat-button routerLink="/login">Prijavi se</a>
+  <a mat-button routerLink="/register">Registruj se</a>
+  <a mat-button routerLink="/contact">Kontakt</a>
+</mat-toolbar>
 <div class="show">
   <router-outlet></router-outlet>
 </div>

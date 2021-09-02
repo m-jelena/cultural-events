@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from './material/material.module';
 import { RegistrationComponent } from './registration/registration.component';
 import { SetNewPasswordComponent } from './set-new-password/set-new-password.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { SetNewPasswordComponent } from './set-new-password/set-new-password.com
     LoginComponent,
     ResetPasswordComponent,
     RegistrationComponent,
-    SetNewPasswordComponent
+    SetNewPasswordComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
