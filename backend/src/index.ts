@@ -17,10 +17,16 @@ app.use(cors());
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 
-app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
+try {
+        app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
+} catch(error) {
+        console.error(`Error occured: ${error.message}`);
+}
 
 mongoose.connect(DB_URL)
         .then(() => console.log('MongoDB connection open'))
         .catch(() => console.log('MongoDB connection error'));
+
+export const db = mongoose.connection;
 
 app.use('/', router);
