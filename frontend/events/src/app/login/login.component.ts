@@ -24,6 +24,7 @@ export class LoginComponent implements OnInit {
       this.userService.login(this.username, this.password).subscribe((user: User) => {
         if(user) {
           alert("Uspešno ste se prijavili!");
+          localStorage.setItem('loginUser', JSON.stringify(user)); // Zapamti login
         } else {
           alert("Nepostojeći korisnik!!");
         }

@@ -48,4 +48,12 @@ export class UserService {
     return this.http.post(`${this.url}/users/setnewpassword/${username}`, data);
 
   }
+
+  getUserData(username) {
+    const data = {
+      username: username
+    }
+
+    return this.http.post(`${this.url}/users/getUserData`, data);
+  }
 }

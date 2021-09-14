@@ -15,4 +15,8 @@ userRouter.route('/setnewpassword/:username').post((req, res) => {
     new UserController().setnewpassword(req, res);
 });
 
+userRouter.route('/getUserData').post((req, res) => {
+    new UserController().getUserData(req, res);
+});
+
 export default userRouter;

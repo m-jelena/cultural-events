@@ -11,6 +11,7 @@ import { MaterialModule } from './material/material.module';
 import { RegistrationComponent } from './registration/registration.component';
 import { SetNewPasswordComponent } from './set-new-password/set-new-password.component';
 import { ContactComponent } from './contact/contact.component';
+import { OrganizationProfileComponent } from './organization-profile/organization-profile.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ContactComponent } from './contact/contact.component';
     ResetPasswordComponent,
     RegistrationComponent,
     SetNewPasswordComponent,
-    ContactComponent
+    ContactComponent,
+    OrganizationProfileComponent
   ],
   imports: [
     BrowserModule,

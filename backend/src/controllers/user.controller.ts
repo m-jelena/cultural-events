@@ -51,4 +51,14 @@ export class UserController {
         
     }
 
+    getUserData = (req: express.Request, res: express.Response) => {
+
+        let username = req.body.username;
+
+        User.findOne({"username": username}, (err, userData) => {
+            if (err) console.log(err);
+            else res.json(userData);
+        });
+    }
+
 }

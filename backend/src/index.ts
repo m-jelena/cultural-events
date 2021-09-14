@@ -8,7 +8,7 @@ import emailRouter from './routes/email.routes';
 const app = express();
 const router = express.Router();
 app.use(cors());
-app.use(bodyParser.urlencoded({ extended: false })) //za email
+app.use(bodyParser.urlencoded({ extended: true })); //za email
 app.use(bodyParser.json());
 
 app.listen(4000, err => {
