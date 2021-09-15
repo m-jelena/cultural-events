@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Event } from '../modules/event';
-import { EVENTS } from '../modules/mockEvents';
+import { Event } from '../models/event';
+import { EVENTS } from '../models/mockEvents';
 import { EventsService } from '../services/events.service';
 
 

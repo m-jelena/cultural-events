@@ -13,11 +13,7 @@
     line-height: 1.45em;
     letter-spacing: 0.01em;
 }
-hr {
-    border: 1px solid white;
-    width: 100%;
-    background-color: grey;
-}
+
 .event-info {
     display: flex;
     margin-bottom: 1.2rem;
@@ -33,6 +29,7 @@ hr {
 .event-category { 
     font-size: 1.3em;
     font-weight: bold;
+    text-transform: capitalize;
     color: rgb(21, 25, 248);
 }
 .event-category:hover{
