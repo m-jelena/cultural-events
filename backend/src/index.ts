@@ -3,6 +3,8 @@ import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
 import helmet from 'helmet';
+import userRouter from "./routes/user.routes";
+import organizationRouter from "./routes/organization.routes";
 
 dotenv.config();
 
@@ -28,5 +30,14 @@ mongoose.connect(DB_URL)
         .catch(() => console.log('MongoDB connection error'));
 
 export const db = mongoose.connection;
+
+router.route('/').get(
+        (req, res) => res.send("Cultural Events in Serbia")
+);
+
+router.use('/users', userRouter);
+
+router.use('/organizations', organizationRouter);
+
 
 app.use('/', router);
