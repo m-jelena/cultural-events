@@ -24,6 +24,9 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
+import { LoginComponent } from './components/ds-components/login/login.component';
+import { RegistrationComponent } from './components/ds-components/registration/registration.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -36,7 +39,9 @@ import { MatMenuModule } from '@angular/material/menu';
     SidenavListComponent,
     HomeComponent,
     TestNavComponent,
-    DashboardComponent
+    DashboardComponent,
+    LoginComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +59,8 @@ import { MatMenuModule } from '@angular/material/menu';
     MatListModule,
     MatGridListModule,
     MatCardModule,
-    MatMenuModule
+    MatMenuModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
