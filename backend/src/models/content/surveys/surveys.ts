@@ -6,6 +6,7 @@ const Schema = mongoose.Schema;
 let Survey = new Schema(
     {
         name: { type: String, required: true, unique: true },
+        key: { type: String, required:true, unique: true },
         description: { type: String },
         img_url: { type: String },
         published_date: { type: Date, required: true },

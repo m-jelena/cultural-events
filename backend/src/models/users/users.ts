@@ -9,8 +9,8 @@ export enum Roles { Organization = 1, Admin = 2 };
 let User = new Schema(
     {
         username: { type: String, trim: true, required: true, unique: true, minLength: 4, maxLength: 20 },
-        password: { type: String, required: true, minLength: 8, maxLength: 100, 
-            get: (): undefined => undefined },
+        password: { type: String, required: true, minLength: 8, maxLength: 100 },
+        email: { type: String, required: true, unique: true },
         role: { type: Number, required: true, default: Roles.Organization },
         reset_password: {
             token: String,

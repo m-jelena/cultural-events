@@ -1,5 +1,4 @@
 import mongoose from 'mongoose';
-import uniqueValidator from 'mongoose-unique-validator';
 import { Password } from '../../common/password';
 import User from '../users/users';
 
@@ -13,7 +12,6 @@ let Portal = new Schema(
                 first_name: { type: String },
                 last_name: { type: String }
             },
-            contact_email: { type: String, unique: true },
             contact_phone: { type: String }
         }],
         contact_persons: [{
@@ -38,7 +36,5 @@ Portal.pre("save", async function(done) {
     }
     done();
 });
-
-Portal.plugin(uniqueValidator);
 
 export default mongoose.model('Portal', Portal, 'portal');
