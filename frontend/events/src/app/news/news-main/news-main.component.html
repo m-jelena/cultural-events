@@ -1,1 +1,25 @@
-<p>news-main works!</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 card-wrapper" *ngFor= "let item of news">
+            <mat-card class="example-card">
+                <mat-card-title-group>
+                  <mat-card-title>
+                    <p class="category">Kategorija: <span [ngClass]="{red:item.categoryGroup==='Scena',blue:item.categoryGroup==='Likovna', green:item.categoryGroup==='Pisana'}">{{item.categoryName}}</span></p> 
+                    <p class="title"><a [routerLink]="['/news-read',1]" title="Read full text">{{item.title}}</a></p>
+                </mat-card-title>
+                  <mat-card-subtitle>
+                    
+                      <p class="author"><i>Autor: {{item.author}}</i></p>
+                      
+                  </mat-card-subtitle>
+                  <img mat-card-md-image [src]="item.image">
+                </mat-card-title-group>
+                <mat-card-content>
+                  <p class="body">{{item.body}}</p>
+                  <p class="date">Datum: {{item.date | customDate}}</p>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</div>
