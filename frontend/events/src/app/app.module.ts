@@ -17,6 +17,7 @@ import { RegistrationComponent } from './registration/registration.component';
 import { SetNewPasswordComponent } from './set-new-password/set-new-password.component';
 import { ContactComponent } from './contact/contact.component';
 import { OrganizationProfileComponent } from './organization-profile/organization-profile.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { OrganizationProfileComponent } from './organization-profile/organizatio
     NewsAddComponent,
     NewsEditComponent,
     NewsReadComponent,
-    CustomDatePipe
+    CustomDatePipe,
+    LandingPageComponent
   ],
 
   imports: [

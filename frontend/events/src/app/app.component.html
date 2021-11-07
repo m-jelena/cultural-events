@@ -3,6 +3,13 @@
     <mat-icon>home</mat-icon>
   </button>
   <span>Kulturni događaji</span>
+
+  <a style="margin-left: 40px;" mat-button routerLink="/">Događaji</a>
+  <a mat-button routerLink="/">Oglasi</a>
+  <a mat-button routerLink="/news">Vesti</a>
+  <a mat-button routerLink="/">Ankete</a>
+  <a mat-button routerLink="/">Organizacije</a>
+  
   <span class="spacer"></span>
   <a mat-button routerLink="/login">Prijavi se</a>
   <a mat-button routerLink="/register">Registruj se</a>
@@ -22,6 +29,14 @@
     </button>
   </mat-menu>
 </mat-toolbar>
+ 
 <div class="show">
   <router-outlet></router-outlet>
 </div>
+<footer class="footer mt-auto py-3 bg-light fixed-bottom">
+  <div class="container d-flex justify-content-center">
+    <a href="" class="link-secondary mx-2">O nama</a>
+    <a href="" class="link-secondary mx-2">Pomoc</a>
+    <a href="" class="link-secondary mx-2">Uslovi koriscenja</a>
+  </div>
+  </footer>
