@@ -1,2 +1,27 @@
-
-<router-outlet></router-outlet>
+<mat-toolbar color="primary">
+  <button mat-icon-button>
+    <mat-icon>home</mat-icon>
+  </button>
+  <span>Kulturni događaji</span>
+  <span class="spacer"></span>
+  <a mat-button routerLink="/login">Prijavi se</a>
+  <a mat-button routerLink="/register">Registruj se</a>
+  <a mat-button routerLink="/contact">Kontakt</a>
+  <!-- <a mat-button routerLink="/org-profile"><mat-icon>manage_accounts</mat-icon> Profil</a> -->
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>settings</mat-icon>
+  </button>
+  <mat-menu #menu>
+    <button mat-menu-item routerLink="/getUserData">
+      <mat-icon>manage_accounts</mat-icon>
+      <span>Uredi Profil</span>
+    </button>
+    <button mat-menu-item routerLink="/">
+      <mat-icon>logout</mat-icon>
+      <span>Odjavi se</span>
+    </button>
+  </mat-menu>
+</mat-toolbar>
+<div class="show">
+  <router-outlet></router-outlet>
+</div>
